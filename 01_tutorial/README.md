@@ -1,3 +1,7 @@
+# 0 preparation
+
+Get from https://dashboard.galadriel.com/
+
 # 1 create a async function
 
 `async function main() {}`
@@ -33,7 +37,7 @@ const completion = await openai.chat.completions.create({
   });
 ```
 
-# 5
+# 5 check it
 
 ```
 console.log(
@@ -42,3 +46,7 @@ console.log(
   console.log(`Hash: ${completion.hash}`);
   console.log(`Signed public key: ${completion.public_key}`);
 ```
+
+# 6 check in the explorer
+
+`https://explorer.galadriel.com/`

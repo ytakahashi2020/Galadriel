@@ -11,18 +11,15 @@ async function main() {
   const completion = await openai.chat.completions.create({
     model: "gpt-4o",
     messages: [
-      { role: "system", content: "You are a helpful assistant." },
-      { role: "user", content: "Hello!" },
+      { role: "system", content: "you are a helpful assistant" },
+      { role: "user", content: "hello!!" },
     ],
   });
+
+  console.log(`Hash:${completion.hash}`);
   console.log(
     `Message: ${JSON.stringify(completion.choices[0].message, null, 2)}`
   );
-  console.log(`Hash: ${completion.hash}`);
-  console.log(`Signed public key: ${completion.public_key}`);
-  //   console.log(`Signature: ${completion.signature}`);
-  //   console.log(`Tx hash: ${completion.tx_hash}`);
-  //   console.log(`Attestation: ${completion.attestation}`);
 }
 
 main();
